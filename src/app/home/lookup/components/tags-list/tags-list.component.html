@@ -1,0 +1,29 @@
+<div class="tags-list">
+    <p>Tags list</p>
+    <mat-selection-list
+        #tags
+        class="tags-list__list"
+        (selectionChange)="onSelectionChange(tags.selectedOptions.selected)"
+    >
+        <div
+            *ngFor="let alias of aliasList"
+            class="tags-list__list__element"
+        >
+            <mat-list-option
+                #aliasOption
+                (click)="onAliasSelected(alias, aliasOption.selected)"
+            >
+                {{ alias.name }}
+            </mat-list-option>
+            <mat-list-option
+                #tagOption
+                *ngFor="let tag of alias.tags"
+                style="margin-left: 20px;"
+                (click)="onTagSelected(alias, tag, tagOption.selected)"
+                [selected]="tag.checked"
+            >
+                {{ tag.name }}
+            </mat-list-option>
+        </div>
+    </mat-selection-list>
+</div>

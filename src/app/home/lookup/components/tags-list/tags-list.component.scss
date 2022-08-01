@@ -1,0 +1,13 @@
+.tags-list {
+    width: 100%;
+    max-height: 20%;
+    &__list {
+        min-height: 100px;
+        max-height: 20%;
+        border: 1px solid gray;
+        &__element {
+            width: 90%;
+            max-height: 20%;
+        }
+    }   
+}

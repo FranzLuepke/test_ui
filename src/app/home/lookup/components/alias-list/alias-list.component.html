@@ -1,0 +1,16 @@
+<div class="alias-list">
+    <p>Alias list</p>
+    <mat-selection-list
+        #alias
+        class="alias-list__list"
+        (selectionChange)="onSelectionChange(alias.selectedOptions.selected)"
+    >
+        <mat-list-option
+            *ngFor="let alias of aliasList"
+            class="alias-list__list__element"
+            [selected]="alias.checked"
+        >
+            {{ alias.name }}
+        </mat-list-option>
+    </mat-selection-list>
+</div>

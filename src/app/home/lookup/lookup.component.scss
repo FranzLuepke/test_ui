@@ -1,0 +1,21 @@
+.lookup {
+    padding: 16px;
+    width: 900px;
+    &__header {
+        display: flex;
+        flex-direction: row;
+        &__title {
+            margin: 0;
+        }
+        margin-bottom: 16px;
+    }
+    &__content {
+        &__lists {
+            display: grid;
+            grid-template-columns: 1fr 1fr;    
+        }
+        &__buttons {
+            display: flex;
+        }
+    }
+}
